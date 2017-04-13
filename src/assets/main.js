@@ -9,7 +9,7 @@ $(function() {
   });
 
   function addCourses(course) {
-    console.log(course.url);
+    console.log(course);
 
     var $badges = $('#badges');
 

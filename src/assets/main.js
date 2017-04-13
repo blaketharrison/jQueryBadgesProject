@@ -4,8 +4,20 @@ $(function() {
     url: 'https://www.codeschool.com/users/blakeharrison.json',
     dataType: 'jsonp',
     success: function(response) {
-      alert('got it');
+      addCourses(response.courses.completed);
     }
   });
+
+  function addCourses(courses) {
+
+    var $badges = $('#badges');
+
+    courses.forEach(function() {
+      $('<div />', {
+        'class': 'course'
+      }).appendTo($badges);
+
+    });
+  }
 
 });

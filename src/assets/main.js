@@ -13,7 +13,7 @@ $(function() {
 
     var $badges = $('#badges');
 
-    courses.forEach(function() {
+    course.forEach(function() {
       var $course = $('<div />', {
         'class': 'course'
       }).appendTo($badges);

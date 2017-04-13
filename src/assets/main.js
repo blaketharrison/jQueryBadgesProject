@@ -19,7 +19,7 @@ $(function() {
       }).appendTo($badges);
 
       $('<h3 />', {
-        text: courses.title
+        text: 'courses.title'
       }).appendTo($course);
 
     });

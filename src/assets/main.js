@@ -8,8 +8,8 @@ $(function() {
     }
   });
 
-  function addCourses(courses) {
-    console.log(courses.url);
+  function addCourses(course) {
+    console.log(course.url);
 
     var $badges = $('#badges');
 
@@ -19,7 +19,7 @@ $(function() {
       }).appendTo($badges);
 
       $('<h3 />', {
-        text: courses.title
+        text: course.title
       }).appendTo($course);
 
     });

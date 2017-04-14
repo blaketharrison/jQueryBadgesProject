@@ -9,20 +9,31 @@ $(function() {
   });
 
   function addCourses(course) {
-    console.log(course);
 
     var $badges = $('#badges');
 
-    course.forEach(function() {
+    //course.forEach(function() {
+    for (var i in course){
       var $course = $('<div />', {
         'class': 'course'
       }).appendTo($badges);
 
       $('<h3 />', {
-        text: course.title
+        text: course[i].title
       }).appendTo($course);
 
-    });
+      $('<img />', {
+        'src': course[i].badge
+      }).appendTo($course);
+
+      $('<a />', {
+        'href': course[i].url,
+        'class': 'btn btn-primary',
+        'target': '_blank',
+        text: 'See Course'
+      }).appendTo($course);
+
+    };
   }
 
 });
